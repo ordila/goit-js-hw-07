@@ -29,14 +29,7 @@ function renderGallery(galleryItems) {
 }
 renderGallery(galleryItems);
 
-refs.listElement.addEventListener('click', event => {
-  event.preventDefault();
-  if (event.target.nodeName !== 'IMG') {
-    return;
-  }
-  const lightbox = new SimpleLightbox('.gallery a', {
-    captionsData: 'alt',
-    captionDelay: 250,
-  });
-  lightbox.open();
+const lightbox = new SimpleLightbox('.gallery a', {
+  captionsData: 'alt',
+  captionDelay: 250,
 });
